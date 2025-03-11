@@ -25,10 +25,10 @@ class CampusFindInput extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       height: height,
-      width: this.width,
+      width: width,
       child: TextField(
-        obscureText: this.obscureText,
-        controller: this.controller,
+        obscureText: obscureText,
+        controller: controller,
         cursorColor: darkGrey,
         style: TextStyle(fontSize: fontSize, color: darkGrey),
         decoration: InputDecoration(
@@ -45,7 +45,7 @@ class CampusFindInput extends StatelessWidget {
             floatingLabelBehavior: FloatingLabelBehavior.never,
             filled: true,
             fillColor: lightGrey,
-            label: Text(this.labelText, style: TextStyle(fontSize: fontSize, color: darkGrey)),
+            label: Text(labelText, style: TextStyle(fontSize: fontSize, color: darkGrey)),
             contentPadding: const EdgeInsets.symmetric(vertical: 2, horizontal: 12),
             border: const OutlineInputBorder(
                 borderSide: BorderSide(

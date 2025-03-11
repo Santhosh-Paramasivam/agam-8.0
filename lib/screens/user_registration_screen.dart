@@ -4,6 +4,8 @@ import 'package:agam/widgets/cf_button.dart';
 import 'package:agam/widgets/dropdown_widget.dart';
 import 'dart:io';
 
+import 'package:agam/screens/dashboard_screen.dart';
+
 class UserRegistrationScreen extends StatelessWidget {
   TextEditingController businessNameController = TextEditingController();
   TextEditingController gstNumberController = TextEditingController();
@@ -12,6 +14,8 @@ class UserRegistrationScreen extends StatelessWidget {
   double TEXT_INPUT_WIDTH = 300;
   double TEXT_INPUT_HEIGHT = 50;
   List<String> USER_TYPE = ["IMPORTER", "EXPORTER"];
+
+  UserRegistrationScreen({super.key});
 
   List<DropdownMenuItem<String>> createUserTypeDropDown() {
     List<DropdownMenuItem<String>> userTypes = [];
@@ -60,7 +64,7 @@ class UserRegistrationScreen extends StatelessWidget {
                 // Drop down not implemented
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text("Select User Type"),
+                  const Text("Select User Type"),
                   CustomDropdownButton(
                       value: "IMPORTER",
                       items: createUserTypeDropDown(),
@@ -68,7 +72,7 @@ class UserRegistrationScreen extends StatelessWidget {
                       padding: const EdgeInsets.fromLTRB(10, 5, 10, 5))
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 25,
               ),
               // Email not implemented
@@ -92,15 +96,27 @@ class UserRegistrationScreen extends StatelessWidget {
                   width: TEXT_INPUT_WIDTH,
                   height: TEXT_INPUT_HEIGHT,
                   fontSize: 14),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
+
+              // Yet to be implemented
               CampusFindButton(
                   onPressed: () async {
-                    Navigator.push(
-                        context, MaterialPageRoute(builder: (context) => UserRegistrationScreen()));
+                   print("Hello");
+
+                    // Navigator.push(
+                    //     context, MaterialPageRoute(builder: (context) => UserRegistrationScreen()));
                   },
-                  label: "User Registration")
+                  label: "Upload documents"),
+              CampusFindButton(
+                  onPressed: () async {
+                   print("Hello");
+
+                    Navigator.push(
+                        context, MaterialPageRoute(builder: (context) => DashboardScreen()));
+                  },
+                  label: "Register")
             ])));
   }
 }
