@@ -4,7 +4,7 @@ class VerificationStatus extends StatelessWidget {
   final bool isVerified;
   final String attributeName;
 
-  VerificationStatus({super.key, required this.isVerified, required this.attributeName});
+  const VerificationStatus({super.key, required this.isVerified, required this.attributeName});
 
   @override
   Widget build(BuildContext context) {
@@ -12,6 +12,7 @@ class VerificationStatus extends StatelessWidget {
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
+          const SizedBox(width: 50,),
           Expanded(
             child: Text(
               attributeName,
@@ -29,6 +30,7 @@ class VerificationStatus extends StatelessWidget {
               style: const TextStyle(color: Colors.white),
             ),
           ),
+          const SizedBox(width: 50,),
         ],
       ),
     );
