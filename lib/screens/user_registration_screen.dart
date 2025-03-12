@@ -3,8 +3,6 @@ import 'package:agam/widgets/cf_input.dart';
 import 'package:agam/widgets/cf_button.dart';
 import 'package:agam/widgets/dropdown_widget.dart';
 
-import 'package:agam/screens/dashboard_screen.dart';
-
 class UserRegistrationScreen extends StatelessWidget {
   TextEditingController businessNameController = TextEditingController();
   TextEditingController gstNumberController = TextEditingController();
@@ -110,10 +108,10 @@ class UserRegistrationScreen extends StatelessWidget {
                   label: "Upload documents"),
               CampusFindButton(
                   onPressed: () async {
-                   print("Hello");
+                  //  print("Hello");
 
-                    Navigator.push(
-                        context, MaterialPageRoute(builder: (context) => const DashboardScreen()));
+                  //   Navigator.push(
+                  //       context, MaterialPageRoute(builder: (context) => const DashboardScreen()));
                   },
                   label: "Register")
             ])));

@@ -1,3 +1,4 @@
+import 'package:agam/screens/importer_exporter_home_screen.dart';
 import 'package:agam/widgets/cf_button.dart';
 import 'package:flutter/material.dart';
 
@@ -23,7 +24,10 @@ class ExporterRegistrationScreen extends StatelessWidget {
             CampusFindButton(onPressed: () {}, label: "Upload LEO (Let Export Order)"),
             CampusFindButton(onPressed: () {}, label: "Upload Bill of Landing"),
             const Spacer(),
-            CampusFindButton(onPressed: () {}, label: "Complete Registration"),
+            CampusFindButton(onPressed: () {
+                    Navigator.push(
+                        context, MaterialPageRoute(builder: (context) => ImporterExporterHomeScreen()));
+            }, label: "Complete Registration"),
             const SizedBox(height: 20)
           ],
         ),

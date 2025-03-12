@@ -3,16 +3,16 @@ import 'package:flutter/foundation.dart';
 import 'package:webview_flutter_plus/webview_flutter_plus.dart';
 import 'package:agam/utils/local_host_server.dart';
 
-class MainPage extends StatefulWidget {
-  const MainPage({super.key});
+class OlaMaps extends StatefulWidget {
+  const OlaMaps({super.key});
 
   @override
-  State<MainPage> createState() => _MainPageState();
+  State<OlaMaps> createState() => _OlaMapsState();
 }
 
-class _MainPageState extends State<MainPage> {
+class _OlaMapsState extends State<OlaMaps> {
   late WebViewControllerPlus _controller;
-  double _height = 700; 
+  double _height = 700;
 
   @override
   void initState() {
@@ -46,21 +46,11 @@ class _MainPageState extends State<MainPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('webview_flutter_plus Example'),
+    return SizedBox(
+      height: _height,
+      child: WebViewWidget(
+        controller: _controller,
       ),
-      body: Column(children: [
-        Expanded(
-          child: SizedBox(
-            height: _height, 
-            child: WebViewWidget(
-              controller: _controller,
-            ),
-          ),
-        ),
-        const Text("End of WebviewPlus", style: TextStyle(fontWeight: FontWeight.bold)),
-      ]),
     );
   }
 }

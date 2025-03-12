@@ -1,7 +1,9 @@
+import 'package:agam/screens/live_tracking_screen.dart';
 import 'package:agam/widgets/icon_text_button.dart';
 import 'package:agam/widgets/shipment_card.dart';
 import 'package:flutter/material.dart';
 import 'package:agam/widgets/search_bar.dart';
+import 'package:agam/widgets/navigation_bar.dart';
 
 class ImporterExporterHomeScreen extends StatelessWidget {
   const ImporterExporterHomeScreen({super.key});
@@ -21,22 +23,7 @@ class ImporterExporterHomeScreen extends StatelessWidget {
             const ShipmentCard(shipmentName: "Battery",image: Image(image: AssetImage('assets/battery.jpg'), width: 70),),
             const ShipmentCard(shipmentName: "Capacitor",image: Image(image: AssetImage('assets/capacitor.jpg'), width: 70),),
             const Spacer(),
-            Container(  
-                color: const Color(0xFFD9D9D9),
-                child: Row(
-              children: [
-                IconTextButton(
-                    onPressed: () {},
-                    buttonText: "Shipments",
-                    buttonIcon: const Icon(Icons.storage)),
-                IconTextButton(
-                    onPressed: () {},
-                    buttonText: "Live-Tracking",
-                    buttonIcon: const Icon(Icons.location_on)),
-                IconTextButton(
-                    onPressed: () {}, buttonText: "Person", buttonIcon: const Icon(Icons.person)),
-              ],
-            ))
+            PortflowNavigationBar()
           ],
         )));
   }

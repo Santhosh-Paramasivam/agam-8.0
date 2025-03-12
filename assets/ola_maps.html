@@ -19,12 +19,10 @@
   <div id="map"></div>
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      // Initialize Ola Maps with your API key
       const olaMaps = new OlaMaps({
         apiKey: apiKey,
       });
 
-      // Initialize the map
       const map = olaMaps.init({
         style: 'https://api.olamaps.io/tiles/vector/v1/styles/default-light-standard/style.json',
         container: 'map',
@@ -38,22 +36,22 @@
       {
         lng: 77.61648476788898,
         lat: 12.932223492103944,
-        info: '<h3>Location 1</h3><p>Description for Location 1.</p>',
+        info: '<h3>1. Dispatch - Completed</h3><p>Shipment Name: High Load Capacitors<br>Dispatch Time: 10-Mar-2025 14:30<br>Carrier: DHL<br>Expected Delivery Date: 12-Mar-2025</p>',
       },
       {
         lng: 77.62000000000000,
         lat: 12.93500000000000,
-        info: '<h3>Location 2</h3><p>Description for Location 2.</p>',
+        info: '<h3>2. In Transit - Completed</h3><p>Current Transport Mode<br>Est. Arrival: 10-Mar-2025 23:20<br>Potential Delays: None</p>',
       },
       {
         lng: 77.62250000000000,
         lat: 12.93750000000000,
-        info: '<h3>Location 3</h3><p>Description for Location 3.</p>',
+        info: '<h3>3. Customs - Completed</h3><p>Customs Location: Kattankulathur<br>Clearance Status: Approved<br>Documents Processed:<br>Bill of Landing<br>Commercial Invoice<br>Delay Reasons: Heavy Rain</p>',
       },
       {
         lng: 77.62500000000000,
         lat: 12.94000000000000,
-        info: '<h3>Location 4</h3><p>Description for Location 4.</p>',
+        info: '<h3>4. Delivery - Completed</h3><p>Delivery Time: 12-Mar-2025 16:34<br>Receiver Confirmation: OTP Verified</p>',
       },
     ];
 
