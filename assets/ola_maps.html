@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Ola Maps in Flutter</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body, html, #map {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+    }
+  </style>
+  <script src="https://www.unpkg.com/olamaps-web-sdk@latest/dist/olamaps-web-sdk.umd.js"></script>
+  <script src="api_key.js"></script>
+</head>
+<body>
+  <div id="map"></div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Initialize Ola Maps with your API key
+      const olaMaps = new OlaMaps({
+        apiKey: apiKey,
+      });
+
+      // Initialize the map
+      const map = olaMaps.init({
+        style: 'https://api.olamaps.io/tiles/vector/v1/styles/default-light-standard/style.json',
+        container: 'map',
+        center: [77.61648476788898, 12.932223492103944], // Initial map center
+        zoom: 15,
+        dragPan: true, 
+        scrollZoom: true, 
+      });
+
+      const locations = [
+      {
+        lng: 77.61648476788898,
+        lat: 12.932223492103944,
+        info: '<h3>Location 1</h3><p>Description for Location 1.</p>',
+      },
+      {
+        lng: 77.62000000000000,
+        lat: 12.93500000000000,
+        info: '<h3>Location 2</h3><p>Description for Location 2.</p>',
+      },
+      {
+        lng: 77.62250000000000,
+        lat: 12.93750000000000,
+        info: '<h3>Location 3</h3><p>Description for Location 3.</p>',
+      },
+      {
+        lng: 77.62500000000000,
+        lat: 12.94000000000000,
+        info: '<h3>Location 4</h3><p>Description for Location 4.</p>',
+      },
+    ];
+
+
+      locations.forEach(location => {
+        const popup = olaMaps
+          .addPopup({ offset: [0, -15], anchor: 'bottom' })
+          .setHTML(location.info);
+
+        olaMaps
+          .addMarker({ color: 'red' })
+          .setLngLat([location.lng, location.lat])
+          .setPopup(popup) 
+          .addTo(map);
+      });
+    });
+  </script>
+</body>
+</html>
+
