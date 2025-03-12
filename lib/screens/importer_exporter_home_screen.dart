@@ -11,20 +11,55 @@ class ImporterExporterHomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.white,
-        appBar: const ShipmentSearchBar(),
-        body: Center(
-            child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            const ShipmentCard(shipmentName: "Resistor", image: Image(image: AssetImage('assets/resistor.jpg'), width: 70,),),
-            const ShipmentCard(shipmentName: "Battery",image: Image(image: AssetImage('assets/battery.jpg'), width: 70),),
-            const ShipmentCard(shipmentName: "Capacitor",image: Image(image: AssetImage('assets/capacitor.jpg'), width: 70),),
-            const Spacer(),
-            PortflowNavigationBar()
-          ],
-        )));
+      backgroundColor: Colors.white,
+      appBar: const ShipmentSearchBar(),
+      body: Column(
+        children: [
+          Expanded(
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  ShipmentCard(
+                    onPressed: (){},
+                    shipmentName: "Resistor",
+                    shipmentId: "#SHIP12345",
+                    currentStatus: "In Transit",
+                    shipmentType: "Air",
+                    trackingNumber: "1234351232",
+                    image: Image(
+                      image: AssetImage('assets/resistor.jpg'),
+                      width: 70,
+                    ),
+                  ),
+                  ShipmentCard(
+                    onPressed: (){},
+                    shipmentId: "#SHIP12412",
+                    shipmentName: "Battery",
+                    currentStatus: "In Transit",
+                    shipmentType: "Seaways",
+                    trackingNumber: "65765534212",
+                    image: Image(
+                        image: AssetImage('assets/battery.jpg'), width: 70),
+                  ),
+                  ShipmentCard(
+                    onPressed: (){},
+                    shipmentName: "Capacitor",
+                    shipmentId: "SHIP563423",
+                    currentStatus: "At Customs",
+                    shipmentType: "Seaways",
+                    trackingNumber: "65765534212",
+                    image: Image(
+                        image: AssetImage('assets/capacitor.jpg'), width: 70),
+                  ),
+                  SizedBox(height: 20), // Add spacing before navbar
+                ],
+              ),
+            ),
+          ),
+          PortflowNavigationBar(),
+        ],
+      ),
+    );
   }
 }
+
