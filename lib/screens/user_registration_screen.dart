@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:agam/widgets/cf_input.dart';
 import 'package:agam/widgets/cf_button.dart';
 import 'package:agam/widgets/dropdown_widget.dart';
-import 'dart:io';
 
 import 'package:agam/screens/dashboard_screen.dart';
 
@@ -114,7 +113,7 @@ class UserRegistrationScreen extends StatelessWidget {
                    print("Hello");
 
                     Navigator.push(
-                        context, MaterialPageRoute(builder: (context) => DashboardScreen()));
+                        context, MaterialPageRoute(builder: (context) => const DashboardScreen()));
                   },
                   label: "Register")
             ])));

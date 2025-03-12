@@ -6,12 +6,14 @@ class ImporterRegistrationScreen extends StatelessWidget {
   TextEditingController iecCodeController = TextEditingController();
   TextEditingController containerIdController = TextEditingController();
 
+  ImporterRegistrationScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Colors.white,
         appBar: AppBar(
-          title: Text("Importer Registration"),
+          title: const Text("Importer Registration"),
           backgroundColor: Colors.white,
         ),
         body: Center(
@@ -32,7 +34,7 @@ class ImporterRegistrationScreen extends StatelessWidget {
                 onPressed: () {}),
             CampusFindButton(onPressed: () {}, label: "Autofill Export Documents"),
             const SizedBox(height: 20),
-            Text("Upload Export Documents", style: TextStyle(fontSize: 20)),
+            const Text("Upload Export Documents", style: TextStyle(fontSize: 20)),
             const SizedBox(height: 10),
             CampusFindButton(onPressed: () {}, label: "Upload Bill of Export"),
             CampusFindButton(onPressed: () {}, label: "Upload BIS Approval Document"),

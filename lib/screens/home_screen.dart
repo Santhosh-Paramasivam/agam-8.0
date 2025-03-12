@@ -1,5 +1,4 @@
 import 'package:agam/screens/common_user_registration.dart';
-import 'package:agam/screens/user_registration_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:agam/widgets/cf_button.dart';
 import 'package:agam/widgets/cf_input.dart';
@@ -42,15 +41,15 @@ class HomeScreen extends StatelessWidget {
               Container(
                   alignment: Alignment.centerRight,
                   child: Row(children: [
-                    Spacer(),
+                    const Spacer(),
                     TextButton(
                       onPressed: () {
                         Navigator.push(context,
                             MaterialPageRoute(builder: (context) => CommonUserRegistration()));
                       },
-                      child: Text("Not Registered Yet?"),
+                      child: const Text("Not Registered Yet?"),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 50,
                     )
                   ])),

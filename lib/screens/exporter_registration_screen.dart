@@ -2,12 +2,14 @@ import 'package:agam/widgets/cf_button.dart';
 import 'package:flutter/material.dart';
 
 class ExporterRegistrationScreen extends StatelessWidget {
+  const ExporterRegistrationScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Text("Exporter Registration"),
+        title: const Text("Exporter Registration"),
         backgroundColor: Colors.white,
       ),
       body: Center(

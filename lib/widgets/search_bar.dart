@@ -18,7 +18,7 @@ class _ShipmentSearchBarState extends State<ShipmentSearchBar> {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      backgroundColor: Color(0xFFD9D9D9),
+      backgroundColor: const Color(0xFFD9D9D9),
       title: _isSearching
           ? TextField(
               controller: _searchController,

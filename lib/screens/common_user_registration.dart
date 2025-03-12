@@ -8,6 +8,8 @@ import 'package:agam/widgets/pf_input_button.dart';
 class CommonUserRegistration extends StatelessWidget {
   TextEditingController businessNameController = TextEditingController();
 
+  CommonUserRegistration({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -71,7 +73,7 @@ class CommonUserRegistration extends StatelessWidget {
             const Spacer(),
             CampusFindButton(onPressed: () {
                         Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => VerificationStatusScreen()));
+                            MaterialPageRoute(builder: (context) => const VerificationStatusScreen()));
             }, label: "Continue Registration"),
             const SizedBox(height: 20),
           ],

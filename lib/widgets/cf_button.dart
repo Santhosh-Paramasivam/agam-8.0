@@ -11,7 +11,7 @@ class CampusFindButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-        width: this.width,
+        width: width,
         child: TextButton(
             style: const ButtonStyle(
                 shape: WidgetStatePropertyAll(
