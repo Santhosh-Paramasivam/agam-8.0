@@ -26,7 +26,7 @@ class ImporterExporterHomeScreen extends StatelessWidget {
                     currentStatus: "In Transit",
                     shipmentType: "Air",
                     trackingNumber: "1234351232",
-                    image: Image(
+                    image: const Image(
                       image: AssetImage('assets/resistor.jpg'),
                       width: 70,
                     ),
@@ -38,7 +38,7 @@ class ImporterExporterHomeScreen extends StatelessWidget {
                     currentStatus: "In Transit",
                     shipmentType: "Seaways",
                     trackingNumber: "65765534212",
-                    image: Image(
+                    image: const Image(
                         image: AssetImage('assets/battery.jpg'), width: 70),
                   ),
                   ShipmentCard(
@@ -48,10 +48,10 @@ class ImporterExporterHomeScreen extends StatelessWidget {
                     currentStatus: "At Customs",
                     shipmentType: "Seaways",
                     trackingNumber: "65765534212",
-                    image: Image(
+                    image: const Image(
                         image: AssetImage('assets/capacitor.jpg'), width: 70),
                   ),
-                  SizedBox(height: 20), // Add spacing before navbar
+                  const SizedBox(height: 20), // Add spacing before navbar
                 ],
               ),
             ),
