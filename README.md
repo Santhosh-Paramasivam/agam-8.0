@@ -1,16 +1,20 @@
-# agam
+# AGAM 8.0 Competition - Portflow App UI  
 
-A new Flutter project.
+## Project Details  
 
-## Getting Started
+Timeframe (mainly) : 9/March/2025 to 13/March/2025
+Languages, framworks and tools used : Dart, Flutter and Figma  
 
-This project is a starting point for a Flutter application.
+## Project Abstract  
 
-A few resources to get you started if this is your first Flutter project:
+Portflow was conceptualized as a shipment management application aimed at simplifying the import/export process by improving customs clearance and document handling. The intended features included:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+🚀 QR Code-Based Customs Clearance – Instant scanning for faster inspections.
+📄 Document Upload & Reuse – Reduce paperwork by storing reusable documents.
+🛰️ Live Shipment Tracking – Real-time shipment visibility.
+🔍 OCR-Powered Error Detection – AI-driven verification to detect document errors.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Project Status  
+
+This project was developed as part of a hackathon and is no longer actively maintained. Only the UI has been implemented, and no backend functionality exists. The repository remains available for reference.  
+
